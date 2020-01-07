@@ -1,8 +1,8 @@
 {
-  "name": "house_hold",
-  "version": "1.0.0",
+  "name": "@household/api-client",
+  "version": "0.0.1",
   "description": "HouseHold_API",
-  "license": "Unlicense",
+  "license": "BSL-1.1",
   "main": "dist/index.js",
   "scripts": {
     "build": "babel src -d dist",
