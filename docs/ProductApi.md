@@ -68,6 +68,7 @@ import HouseHold from 'house_hold';
 
 let apiInstance = new HouseHold.ProductApi();
 let opts = {
+  'name': "name_example", // String | 
   'page': 1 // Number | The collection page number
 };
 apiInstance.getProductCollection(opts).then((data) => {
@@ -83,6 +84,7 @@ apiInstance.getProductCollection(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **name** | **String**|  | [optional] 
  **page** | **Number**| The collection page number | [optional] [default to 1]
 
 ### Return type

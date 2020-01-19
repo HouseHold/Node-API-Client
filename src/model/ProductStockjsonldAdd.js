@@ -14,18 +14,18 @@
 import ApiClient from '../ApiClient';
 
 /**
- * The ProductLocationjsonld model module.
- * @module model/ProductLocationjsonld
+ * The ProductStockjsonldAdd model module.
+ * @module model/ProductStockjsonldAdd
  * @version 0.0.3
  */
-class ProductLocationjsonld {
+class ProductStockjsonldAdd {
     /**
-     * Constructs a new <code>ProductLocationjsonld</code>.
-     * @alias module:model/ProductLocationjsonld
+     * Constructs a new <code>ProductStockjsonldAdd</code>.
+     * @alias module:model/ProductStockjsonldAdd
      */
     constructor() { 
         
-        ProductLocationjsonld.initialize(this);
+        ProductStockjsonldAdd.initialize(this);
     }
 
     /**
@@ -37,15 +37,15 @@ class ProductLocationjsonld {
     }
 
     /**
-     * Constructs a <code>ProductLocationjsonld</code> from a plain JavaScript object, optionally creating a new instance.
+     * Constructs a <code>ProductStockjsonldAdd</code> from a plain JavaScript object, optionally creating a new instance.
      * Copies all relevant properties from <code>data</code> to <code>obj</code> if supplied or a new instance if not.
      * @param {Object} data The plain JavaScript object bearing properties of interest.
-     * @param {module:model/ProductLocationjsonld} obj Optional instance to populate.
-     * @return {module:model/ProductLocationjsonld} The populated <code>ProductLocationjsonld</code> instance.
+     * @param {module:model/ProductStockjsonldAdd} obj Optional instance to populate.
+     * @return {module:model/ProductStockjsonldAdd} The populated <code>ProductStockjsonldAdd</code> instance.
      */
     static constructFromObject(data, obj) {
         if (data) {
-            obj = obj || new ProductLocationjsonld();
+            obj = obj || new ProductStockjsonldAdd();
 
             if (data.hasOwnProperty('@context')) {
                 obj['@context'] = ApiClient.convertToType(data['@context'], 'String');
@@ -56,14 +56,8 @@ class ProductLocationjsonld {
             if (data.hasOwnProperty('@type')) {
                 obj['@type'] = ApiClient.convertToType(data['@type'], 'String');
             }
-            if (data.hasOwnProperty('name')) {
-                obj['name'] = ApiClient.convertToType(data['name'], 'String');
-            }
-            if (data.hasOwnProperty('stocks')) {
-                obj['stocks'] = ApiClient.convertToType(data['stocks'], ['String']);
-            }
-            if (data.hasOwnProperty('id')) {
-                obj['id'] = ApiClient.convertToType(data['id'], 'String');
+            if (data.hasOwnProperty('quantity')) {
+                obj['quantity'] = ApiClient.convertToType(data['quantity'], 'Number');
             }
         }
         return obj;
@@ -75,37 +69,27 @@ class ProductLocationjsonld {
 /**
  * @member {String} @context
  */
-ProductLocationjsonld.prototype['@context'] = undefined;
+ProductStockjsonldAdd.prototype['@context'] = undefined;
 
 /**
  * @member {String} @id
  */
-ProductLocationjsonld.prototype['@id'] = undefined;
+ProductStockjsonldAdd.prototype['@id'] = undefined;
 
 /**
  * @member {String} @type
  */
-ProductLocationjsonld.prototype['@type'] = undefined;
+ProductStockjsonldAdd.prototype['@type'] = undefined;
 
 /**
- * @member {String} name
+ * @member {Number} quantity
  */
-ProductLocationjsonld.prototype['name'] = undefined;
-
-/**
- * @member {Array.<String>} stocks
- */
-ProductLocationjsonld.prototype['stocks'] = undefined;
-
-/**
- * @member {String} id
- */
-ProductLocationjsonld.prototype['id'] = undefined;
+ProductStockjsonldAdd.prototype['quantity'] = undefined;
 
 
 
 
 
 
-export default ProductLocationjsonld;
+export default ProductStockjsonldAdd;
 

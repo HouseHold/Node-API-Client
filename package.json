@@ -1,6 +1,6 @@
 {
   "name": "@household/api-client",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "HouseHold_API",
   "license": "BSL-1.1",
   "main": "dist/index.js",

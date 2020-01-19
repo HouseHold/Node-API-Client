@@ -4,8 +4,8 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**name** | **String** | Please solve https://github.com/doctrine/common/issues/881 before adding strict type. | [optional] 
-**category** | **String** | Please solve https://github.com/doctrine/common/issues/881 before adding strict type. | [optional] 
+**name** | **String** |  | [optional] 
+**category** | **String** |  | [optional] 
 **products** | **[String]** |  | [optional] 
 **id** | **String** |  | [optional] [readonly] 
 
