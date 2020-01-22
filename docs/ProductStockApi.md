@@ -24,6 +24,12 @@ import HouseHold from 'house_hold';
 
 let apiInstance = new HouseHold.ProductStockApi();
 let opts = {
+  'quantity': 56, // Number | 
+  'quantity2': [null], // [Number] | 
+  'location': "location_example", // String | 
+  'location2': ["null"], // [String] | 
+  'product': "product_example", // String | 
+  'product2': ["null"], // [String] | 
   'page': 1 // Number | The collection page number
 };
 apiInstance.getProductStockCollection(opts).then((data) => {
@@ -39,6 +45,12 @@ apiInstance.getProductStockCollection(opts).then((data) => {
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
+ **quantity** | **Number**|  | [optional] 
+ **quantity2** | [**[Number]**](Number.md)|  | [optional] 
+ **location** | **String**|  | [optional] 
+ **location2** | [**[String]**](String.md)|  | [optional] 
+ **product** | **String**|  | [optional] 
+ **product2** | [**[String]**](String.md)|  | [optional] 
  **page** | **Number**| The collection page number | [optional] [default to 1]
 
 ### Return type

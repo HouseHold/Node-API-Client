@@ -9,7 +9,7 @@ Name | Type | Description | Notes
 **type** | **String** |  | [optional] [readonly] 
 **product** | **String** |  | [optional] 
 **location** | **String** |  | [optional] 
-**quantity** | **Number** |  | [optional] 
+**quantity** | **Number** | Quantity of products in stock. Cannot be updated directly. | [optional] 
 **bestBefore** | **[String]** | Array in format where first YYYY-MM-DD and then quantity products on that date | [optional] [readonly] 
 **id** | **String** |  | [optional] [readonly] 
 
