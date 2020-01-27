@@ -1,3 +1,4 @@
 # OpenAPI Generator Ignore
 .openapi-generator-ignore
 .travis.yml
+git_push.sh
