@@ -201,6 +201,59 @@ export default class ProductStockApi {
 
 
     /**
+     * Consume product from stock.
+     * Consume specific amount of specific product from stock.
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}, with an object containing HTTP response
+     */
+    stockConsumeProductStockItemWithHttpInfo(id, opts) {
+      opts = opts || {};
+      let postBody = opts['inlineObject2'];
+      // verify the required parameter 'id' is set
+      if (id === undefined || id === null) {
+        throw new Error("Missing the required parameter 'id' when calling stockConsumeProductStockItem");
+      }
+
+      let pathParams = {
+        'id': id
+      };
+      let queryParams = {
+      };
+      let headerParams = {
+      };
+      let formParams = {
+      };
+
+      let authNames = [];
+      let contentTypes = ['application/ld+json'];
+      let accepts = [];
+      let returnType = null;
+      return this.apiClient.callApi(
+        '/api/product/stocks/{id}/consume', 'POST',
+        pathParams, queryParams, headerParams, formParams, postBody,
+        authNames, contentTypes, accepts, returnType, null
+      );
+    }
+
+    /**
+     * Consume product from stock.
+     * Consume specific amount of specific product from stock.
+     * @param {String} id 
+     * @param {Object} opts Optional parameters
+     * @param {module:model/InlineObject2} opts.inlineObject2 
+     * @return {Promise} a {@link https://www.promisejs.org/|Promise}
+     */
+    stockConsumeProductStockItem(id, opts) {
+      return this.stockConsumeProductStockItemWithHttpInfo(id, opts)
+        .then(function(response_and_data) {
+          return response_and_data.data;
+        });
+    }
+
+
+    /**
      * Create stock for product and location.
      * Initialize stock for specific product in specific location.
      * @param {Object} opts Optional parameters

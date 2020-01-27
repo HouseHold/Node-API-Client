@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**getProductStockCollection**](ProductStockApi.md#getProductStockCollection) | **GET** /api/product/stocks | Retrieves the collection of ProductStock resources.
 [**getProductStockItem**](ProductStockApi.md#getProductStockItem) | **GET** /api/product/stocks/{id} | Retrieves a ProductStock resource.
 [**stockAddProductStockItem**](ProductStockApi.md#stockAddProductStockItem) | **POST** /api/product/stocks/{id}/add | Add product into stock.
+[**stockConsumeProductStockItem**](ProductStockApi.md#stockConsumeProductStockItem) | **POST** /api/product/stocks/{id}/consume | Consume product from stock.
 [**stockInitProductStockCollection**](ProductStockApi.md#stockInitProductStockCollection) | **POST** /api/product/stocks | Create stock for product and location.
 
 
@@ -142,6 +143,54 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**|  | 
  **inlineObject1** | [**InlineObject1**](InlineObject1.md)|  | [optional] 
+
+### Return type
+
+null (empty response body)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: application/ld+json
+- **Accept**: Not defined
+
+
+## stockConsumeProductStockItem
+
+> stockConsumeProductStockItem(id, opts)
+
+Consume product from stock.
+
+Consume specific amount of specific product from stock.
+
+### Example
+
+```javascript
+import HouseHold from 'house_hold';
+
+let apiInstance = new HouseHold.ProductStockApi();
+let id = "id_example"; // String | 
+let opts = {
+  'inlineObject2': new HouseHold.InlineObject2() // InlineObject2 | 
+};
+apiInstance.stockConsumeProductStockItem(id, opts).then(() => {
+  console.log('API called successfully.');
+}, (error) => {
+  console.error(error);
+});
+
+```
+
+### Parameters
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **id** | **String**|  | 
+ **inlineObject2** | [**InlineObject2**](InlineObject2.md)|  | [optional] 
 
 ### Return type
 

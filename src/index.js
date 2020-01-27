@@ -91,6 +91,12 @@ export {
     InlineObject1,
 
     /**
+     * The InlineObject2 model constructor.
+     * @property {module:model/InlineObject2}
+     */
+    InlineObject2,
+
+    /**
      * The InlineResponse200 model constructor.
      * @property {module:model/InlineResponse200}
      */
@@ -191,6 +197,12 @@ export {
      * @property {module:model/ProductStockjsonldAdd}
      */
     ProductStockjsonldAdd,
+
+    /**
+     * The ProductStockjsonldConsume model constructor.
+     * @property {module:model/ProductStockjsonldConsume}
+     */
+    ProductStockjsonldConsume,
 
     /**
      * The Productjsonld model constructor.

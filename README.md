@@ -145,6 +145,7 @@ Class | Method | HTTP request | Description
 *HouseHold.ProductStockApi* | [**getProductStockCollection**](docs/ProductStockApi.md#getProductStockCollection) | **GET** /api/product/stocks | Retrieves the collection of ProductStock resources.
 *HouseHold.ProductStockApi* | [**getProductStockItem**](docs/ProductStockApi.md#getProductStockItem) | **GET** /api/product/stocks/{id} | Retrieves a ProductStock resource.
 *HouseHold.ProductStockApi* | [**stockAddProductStockItem**](docs/ProductStockApi.md#stockAddProductStockItem) | **POST** /api/product/stocks/{id}/add | Add product into stock.
+*HouseHold.ProductStockApi* | [**stockConsumeProductStockItem**](docs/ProductStockApi.md#stockConsumeProductStockItem) | **POST** /api/product/stocks/{id}/consume | Consume product from stock.
 *HouseHold.ProductStockApi* | [**stockInitProductStockCollection**](docs/ProductStockApi.md#stockInitProductStockCollection) | **POST** /api/product/stocks | Create stock for product and location.
 
 
@@ -152,6 +153,7 @@ Class | Method | HTTP request | Description
 
  - [HouseHold.InlineObject](docs/InlineObject.md)
  - [HouseHold.InlineObject1](docs/InlineObject1.md)
+ - [HouseHold.InlineObject2](docs/InlineObject2.md)
  - [HouseHold.InlineResponse200](docs/InlineResponse200.md)
  - [HouseHold.InlineResponse2001](docs/InlineResponse2001.md)
  - [HouseHold.InlineResponse2002](docs/InlineResponse2002.md)
@@ -169,6 +171,7 @@ Class | Method | HTTP request | Description
  - [HouseHold.ProductLocationjsonld](docs/ProductLocationjsonld.md)
  - [HouseHold.ProductStockjsonld](docs/ProductStockjsonld.md)
  - [HouseHold.ProductStockjsonldAdd](docs/ProductStockjsonldAdd.md)
+ - [HouseHold.ProductStockjsonldConsume](docs/ProductStockjsonldConsume.md)
  - [HouseHold.Productjsonld](docs/Productjsonld.md)
 
 
