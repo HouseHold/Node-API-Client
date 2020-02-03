@@ -6,13 +6,12 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "build": "babel src -d dist"
+    "build": "tsc"
   },
   "browser": {
     "fs": false
   },
   "dependencies": {
-    "@babel/cli": "^7.0.0",
     "@types/node": "^13.7.0",
     "axios": "^0.19"
   },
