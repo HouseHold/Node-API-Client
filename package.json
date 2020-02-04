@@ -6,7 +6,8 @@
   "main": "dist/index.js",
   "types": "dist/index.d.ts",
   "scripts": {
-    "prepack": "yarn run build",
+    "prepack": "yarn run patch build",
+    "patch": "git apply patches/*",
     "build": "tsc"
   },
   "browser": {
