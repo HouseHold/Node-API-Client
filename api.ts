@@ -439,6 +439,12 @@ export interface ProductCategoryjsonld {
    * @memberof ProductCategoryjsonld
    */
   collections?: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProductCategoryjsonld
+   */
+  id?: string;
 }
 /**
  *
@@ -513,6 +519,12 @@ export interface ProductCollectionjsonld {
    * @memberof ProductCollectionjsonld
    */
   products?: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProductCollectionjsonld
+   */
+  id?: string;
 }
 /**
  *
@@ -575,6 +587,12 @@ export interface ProductLocationjsonld {
    * @memberof ProductLocationjsonld
    */
   stocks?: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProductLocationjsonld
+   */
+  id?: string;
 }
 /**
  *
@@ -674,6 +692,12 @@ export interface ProductStockjsonld {
    * @memberof ProductStockjsonld
    */
   bestBefore?: { [key: string]: string };
+  /**
+   *
+   * @type {string}
+   * @memberof ProductStockjsonld
+   */
+  id?: string;
 }
 /**
  *
@@ -791,6 +815,12 @@ export interface Productjsonld {
    * @memberof Productjsonld
    */
   stocks?: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof Productjsonld
+   */
+  id?: string;
 }
 
 /**
@@ -1325,7 +1355,7 @@ export const ProductApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteProductItem(id: string, options?: any) {
+    deleteProductItem(id: string, options?: any): AxiosPromise<void> {
       return ProductApiFp(configuration).deleteProductItem(id, options)(
         axios,
         basePath
@@ -1339,7 +1369,11 @@ export const ProductApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductCollection(name?: string, page?: number, options?: any) {
+    getProductCollection(
+      name?: string,
+      page?: number,
+      options?: any
+    ): AxiosPromise<InlineResponse2004> {
       return ProductApiFp(configuration).getProductCollection(
         name,
         page,
@@ -1353,7 +1387,7 @@ export const ProductApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductItem(id: string, options?: any) {
+    getProductItem(id: string, options?: any): AxiosPromise<Productjsonld> {
       return ProductApiFp(configuration).getProductItem(id, options)(
         axios,
         basePath
@@ -1367,7 +1401,11 @@ export const ProductApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    patchProductItem(id: string, product?: Product, options?: any) {
+    patchProductItem(
+      id: string,
+      product?: Product,
+      options?: any
+    ): AxiosPromise<Productjsonld> {
       return ProductApiFp(configuration).patchProductItem(
         id,
         product,
@@ -1381,7 +1419,10 @@ export const ProductApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    postProductCollection(productjsonld?: Productjsonld, options?: any) {
+    postProductCollection(
+      productjsonld?: Productjsonld,
+      options?: any
+    ): AxiosPromise<Productjsonld> {
       return ProductApiFp(configuration).postProductCollection(
         productjsonld,
         options
@@ -1395,7 +1436,11 @@ export const ProductApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    putProductItem(id: string, productjsonld?: Productjsonld, options?: any) {
+    putProductItem(
+      id: string,
+      productjsonld?: Productjsonld,
+      options?: any
+    ): AxiosPromise<Productjsonld> {
       return ProductApiFp(configuration).putProductItem(
         id,
         productjsonld,
@@ -2041,7 +2086,7 @@ export const ProductCategoryApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteProductCategoryItem(id: string, options?: any) {
+    deleteProductCategoryItem(id: string, options?: any): AxiosPromise<void> {
       return ProductCategoryApiFp(configuration).deleteProductCategoryItem(
         id,
         options
@@ -2054,7 +2099,10 @@ export const ProductCategoryApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductCategoryCollection(page?: number, options?: any) {
+    getProductCategoryCollection(
+      page?: number,
+      options?: any
+    ): AxiosPromise<InlineResponse200> {
       return ProductCategoryApiFp(configuration).getProductCategoryCollection(
         page,
         options
@@ -2067,7 +2115,10 @@ export const ProductCategoryApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductCategoryItem(id: string, options?: any) {
+    getProductCategoryItem(
+      id: string,
+      options?: any
+    ): AxiosPromise<ProductCategoryjsonld> {
       return ProductCategoryApiFp(configuration).getProductCategoryItem(
         id,
         options
@@ -2085,7 +2136,7 @@ export const ProductCategoryApiFactory = function(
       id: string,
       productCategory?: ProductCategory,
       options?: any
-    ) {
+    ): AxiosPromise<ProductCategoryjsonld> {
       return ProductCategoryApiFp(configuration).patchProductCategoryItem(
         id,
         productCategory,
@@ -2102,7 +2153,7 @@ export const ProductCategoryApiFactory = function(
     postProductCategoryCollection(
       productCategoryjsonld?: ProductCategoryjsonld,
       options?: any
-    ) {
+    ): AxiosPromise<ProductCategoryjsonld> {
       return ProductCategoryApiFp(configuration).postProductCategoryCollection(
         productCategoryjsonld,
         options
@@ -2120,7 +2171,7 @@ export const ProductCategoryApiFactory = function(
       id: string,
       productCategoryjsonld?: ProductCategoryjsonld,
       options?: any
-    ) {
+    ): AxiosPromise<ProductCategoryjsonld> {
       return ProductCategoryApiFp(configuration).putProductCategoryItem(
         id,
         productCategoryjsonld,
@@ -2774,7 +2825,7 @@ export const ProductCollectionApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteProductCollectionItem(id: string, options?: any) {
+    deleteProductCollectionItem(id: string, options?: any): AxiosPromise<void> {
       return ProductCollectionApiFp(configuration).deleteProductCollectionItem(
         id,
         options
@@ -2787,7 +2838,10 @@ export const ProductCollectionApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductCollectionCollection(page?: number, options?: any) {
+    getProductCollectionCollection(
+      page?: number,
+      options?: any
+    ): AxiosPromise<InlineResponse2001> {
       return ProductCollectionApiFp(
         configuration
       ).getProductCollectionCollection(page, options)(axios, basePath);
@@ -2799,7 +2853,10 @@ export const ProductCollectionApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductCollectionItem(id: string, options?: any) {
+    getProductCollectionItem(
+      id: string,
+      options?: any
+    ): AxiosPromise<ProductCollectionjsonld> {
       return ProductCollectionApiFp(configuration).getProductCollectionItem(
         id,
         options
@@ -2817,7 +2874,7 @@ export const ProductCollectionApiFactory = function(
       id: string,
       productCollection?: ProductCollection,
       options?: any
-    ) {
+    ): AxiosPromise<ProductCollectionjsonld> {
       return ProductCollectionApiFp(configuration).patchProductCollectionItem(
         id,
         productCollection,
@@ -2834,7 +2891,7 @@ export const ProductCollectionApiFactory = function(
     postProductCollectionCollection(
       productCollectionjsonld?: ProductCollectionjsonld,
       options?: any
-    ) {
+    ): AxiosPromise<ProductCollectionjsonld> {
       return ProductCollectionApiFp(
         configuration
       ).postProductCollectionCollection(productCollectionjsonld, options)(
@@ -2854,7 +2911,7 @@ export const ProductCollectionApiFactory = function(
       id: string,
       productCollectionjsonld?: ProductCollectionjsonld,
       options?: any
-    ) {
+    ): AxiosPromise<ProductCollectionjsonld> {
       return ProductCollectionApiFp(configuration).putProductCollectionItem(
         id,
         productCollectionjsonld,
@@ -3507,7 +3564,7 @@ export const ProductLocationApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    deleteProductLocationItem(id: string, options?: any) {
+    deleteProductLocationItem(id: string, options?: any): AxiosPromise<void> {
       return ProductLocationApiFp(configuration).deleteProductLocationItem(
         id,
         options
@@ -3520,7 +3577,10 @@ export const ProductLocationApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductLocationCollection(page?: number, options?: any) {
+    getProductLocationCollection(
+      page?: number,
+      options?: any
+    ): AxiosPromise<InlineResponse2002> {
       return ProductLocationApiFp(configuration).getProductLocationCollection(
         page,
         options
@@ -3533,7 +3593,10 @@ export const ProductLocationApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductLocationItem(id: string, options?: any) {
+    getProductLocationItem(
+      id: string,
+      options?: any
+    ): AxiosPromise<ProductLocationjsonld> {
       return ProductLocationApiFp(configuration).getProductLocationItem(
         id,
         options
@@ -3551,7 +3614,7 @@ export const ProductLocationApiFactory = function(
       id: string,
       productLocation?: ProductLocation,
       options?: any
-    ) {
+    ): AxiosPromise<ProductLocationjsonld> {
       return ProductLocationApiFp(configuration).patchProductLocationItem(
         id,
         productLocation,
@@ -3568,7 +3631,7 @@ export const ProductLocationApiFactory = function(
     postProductLocationCollection(
       productLocationjsonld?: ProductLocationjsonld,
       options?: any
-    ) {
+    ): AxiosPromise<ProductLocationjsonld> {
       return ProductLocationApiFp(configuration).postProductLocationCollection(
         productLocationjsonld,
         options
@@ -3586,7 +3649,7 @@ export const ProductLocationApiFactory = function(
       id: string,
       productLocationjsonld?: ProductLocationjsonld,
       options?: any
-    ) {
+    ): AxiosPromise<ProductLocationjsonld> {
       return ProductLocationApiFp(configuration).putProductLocationItem(
         id,
         productLocationjsonld,
@@ -4226,7 +4289,7 @@ export const ProductStockApiFactory = function(
       product2?: Array<string>,
       page?: number,
       options?: any
-    ) {
+    ): AxiosPromise<InlineResponse2003> {
       return ProductStockApiFp(configuration).getProductStockCollection(
         quantity,
         quantity2,
@@ -4245,7 +4308,10 @@ export const ProductStockApiFactory = function(
      * @param {*} [options] Override http request option.
      * @throws {RequiredError}
      */
-    getProductStockItem(id: string, options?: any) {
+    getProductStockItem(
+      id: string,
+      options?: any
+    ): AxiosPromise<ProductStockjsonld> {
       return ProductStockApiFp(configuration).getProductStockItem(id, options)(
         axios,
         basePath
@@ -4263,7 +4329,7 @@ export const ProductStockApiFactory = function(
       id: string,
       inlineObject1?: InlineObject1,
       options?: any
-    ) {
+    ): AxiosPromise<void> {
       return ProductStockApiFp(configuration).stockAddProductStockItem(
         id,
         inlineObject1,
@@ -4282,7 +4348,7 @@ export const ProductStockApiFactory = function(
       id: string,
       inlineObject2?: InlineObject2,
       options?: any
-    ) {
+    ): AxiosPromise<void> {
       return ProductStockApiFp(configuration).stockConsumeProductStockItem(
         id,
         inlineObject2,
@@ -4299,7 +4365,7 @@ export const ProductStockApiFactory = function(
     stockInitProductStockCollection(
       inlineObject?: InlineObject,
       options?: any
-    ) {
+    ): AxiosPromise<ProductStockjsonld> {
       return ProductStockApiFp(configuration).stockInitProductStockCollection(
         inlineObject,
         options
