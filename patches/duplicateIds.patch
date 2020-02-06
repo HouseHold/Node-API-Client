@@ -1,82 +1,119 @@
 diff --git a/api.ts b/api.ts
-index e33bcbd..8809d4e 100644
+index 6b9b3c7..22c443d 100644
 --- a/api.ts
 +++ b/api.ts
-@@ -439,12 +439,6 @@ export interface ProductCategoryjsonld {
+@@ -414,19 +414,19 @@ export interface ProductCategoryjsonld {
+    * @type {string}
     * @memberof ProductCategoryjsonld
     */
-   collections: Array<string>;
--  /**
--   *
--   * @type {string}
--   * @memberof ProductCategoryjsonld
--   */
+-  context: string;
++  '@context': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductCategoryjsonld
+    */
 -  id: string;
- }
- /**
-  *
-@@ -519,12 +513,6 @@ export interface ProductCollectionjsonld {
++  '@id': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductCategoryjsonld
+    */
+-  type: string;
++  '@type': string;
+   /**
+    *
+    * @type {string}
+@@ -488,19 +488,19 @@ export interface ProductCollectionjsonld {
+    * @type {string}
     * @memberof ProductCollectionjsonld
     */
-   products: Array<string>;
--  /**
--   *
--   * @type {string}
--   * @memberof ProductCollectionjsonld
--   */
+-  context: string;
++  '@context': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductCollectionjsonld
+    */
 -  id: string;
- }
- /**
-  *
-@@ -587,12 +575,6 @@ export interface ProductLocationjsonld {
++  '@id': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductCollectionjsonld
+    */
+-  type: string;
++  '@type': string;
+   /**
+    *
+    * @type {string}
+@@ -562,19 +562,19 @@ export interface ProductLocationjsonld {
+    * @type {string}
     * @memberof ProductLocationjsonld
     */
-   stocks: Array<string>;
--  /**
--   *
--   * @type {string}
--   * @memberof ProductLocationjsonld
--   */
--  id: string;
- }
- /**
-  *
-@@ -624,12 +606,6 @@ export interface ProductStock {
-    * @memberof ProductStock
+-  context: string;
++  '@context': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductLocationjsonld
     */
-   bestBefore?: { [key: string]: string };
--  /**
--   *
--   * @type {string}
--   * @memberof ProductStock
--   */
--  id?: string;
- }
- /**
-  *
-@@ -692,12 +668,6 @@ export interface ProductStockjsonld {
+-  id: string;
++  '@id': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductLocationjsonld
+    */
+-  type: string;
++  '@type': string;
+   /**
+    *
+    * @type {string}
+@@ -655,19 +655,19 @@ export interface ProductStockjsonld {
+    * @type {string}
     * @memberof ProductStockjsonld
     */
-   bestBefore: { [key: string]: string };
--  /**
--   *
--   * @type {string}
--   * @memberof ProductStockjsonld
--   */
+-  context: string;
++  '@context': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductStockjsonld
+    */
 -  id: string;
- }
- /**
-  *
-@@ -815,12 +785,6 @@ export interface Productjsonld {
++  '@id': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductStockjsonld
+    */
+-  type: string;
++  '@type': string;
+   /**
+    *
+    * @type {string}
+@@ -766,19 +766,19 @@ export interface Productjsonld {
+    * @type {string}
     * @memberof Productjsonld
     */
-   stocks: Array<string>;
--  /**
--   *
--   * @type {string}
--   * @memberof Productjsonld
--   */
+-  context: string;
++  '@context': string;
+   /**
+    *
+    * @type {string}
+    * @memberof Productjsonld
+    */
 -  id: string;
- }
-
- /**
++  '@id': string;
+   /**
+    *
+    * @type {string}
+    * @memberof Productjsonld
+    */
+-  type: string;
++  '@type': string;
+   /**
+    *
+    * @type {string}

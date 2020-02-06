@@ -414,19 +414,19 @@ export interface ProductCategoryjsonld {
    * @type {string}
    * @memberof ProductCategoryjsonld
    */
-  context: string;
+  '@context': string;
   /**
    *
    * @type {string}
    * @memberof ProductCategoryjsonld
    */
-  id: string;
+  '@id': string;
   /**
    *
    * @type {string}
    * @memberof ProductCategoryjsonld
    */
-  type: string;
+  '@type': string;
   /**
    *
    * @type {string}
@@ -439,6 +439,12 @@ export interface ProductCategoryjsonld {
    * @memberof ProductCategoryjsonld
    */
   collections: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProductCategoryjsonld
+   */
+  id: string;
 }
 /**
  *
@@ -482,19 +488,19 @@ export interface ProductCollectionjsonld {
    * @type {string}
    * @memberof ProductCollectionjsonld
    */
-  context: string;
+  '@context': string;
   /**
    *
    * @type {string}
    * @memberof ProductCollectionjsonld
    */
-  id: string;
+  '@id': string;
   /**
    *
    * @type {string}
    * @memberof ProductCollectionjsonld
    */
-  type: string;
+  '@type': string;
   /**
    *
    * @type {string}
@@ -513,6 +519,12 @@ export interface ProductCollectionjsonld {
    * @memberof ProductCollectionjsonld
    */
   products: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProductCollectionjsonld
+   */
+  id: string;
 }
 /**
  *
@@ -550,19 +562,19 @@ export interface ProductLocationjsonld {
    * @type {string}
    * @memberof ProductLocationjsonld
    */
-  context: string;
+  '@context': string;
   /**
    *
    * @type {string}
    * @memberof ProductLocationjsonld
    */
-  id: string;
+  '@id': string;
   /**
    *
    * @type {string}
    * @memberof ProductLocationjsonld
    */
-  type: string;
+  '@type': string;
   /**
    *
    * @type {string}
@@ -575,6 +587,12 @@ export interface ProductLocationjsonld {
    * @memberof ProductLocationjsonld
    */
   stocks: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof ProductLocationjsonld
+   */
+  id: string;
 }
 /**
  *
@@ -606,6 +624,12 @@ export interface ProductStock {
    * @memberof ProductStock
    */
   bestBefore?: { [key: string]: string };
+  /**
+   *
+   * @type {string}
+   * @memberof ProductStock
+   */
+  id?: string;
 }
 /**
  *
@@ -631,19 +655,19 @@ export interface ProductStockjsonld {
    * @type {string}
    * @memberof ProductStockjsonld
    */
-  context: string;
+  '@context': string;
   /**
    *
    * @type {string}
    * @memberof ProductStockjsonld
    */
-  id: string;
+  '@id': string;
   /**
    *
    * @type {string}
    * @memberof ProductStockjsonld
    */
-  type: string;
+  '@type': string;
   /**
    *
    * @type {string}
@@ -668,6 +692,12 @@ export interface ProductStockjsonld {
    * @memberof ProductStockjsonld
    */
   bestBefore: { [key: string]: string };
+  /**
+   *
+   * @type {string}
+   * @memberof ProductStockjsonld
+   */
+  id: string;
 }
 /**
  *
@@ -736,19 +766,19 @@ export interface Productjsonld {
    * @type {string}
    * @memberof Productjsonld
    */
-  context: string;
+  '@context': string;
   /**
    *
    * @type {string}
    * @memberof Productjsonld
    */
-  id: string;
+  '@id': string;
   /**
    *
    * @type {string}
    * @memberof Productjsonld
    */
-  type: string;
+  '@type': string;
   /**
    *
    * @type {string}
@@ -785,6 +815,12 @@ export interface Productjsonld {
    * @memberof Productjsonld
    */
   stocks: Array<string>;
+  /**
+   *
+   * @type {string}
+   * @memberof Productjsonld
+   */
+  id: string;
 }
 
 /**
