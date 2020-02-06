@@ -5,39 +5,39 @@ index e33bcbd..8809d4e 100644
 @@ -439,12 +439,6 @@ export interface ProductCategoryjsonld {
     * @memberof ProductCategoryjsonld
     */
-   collections?: Array<string>;
+   collections: Array<string>;
 -  /**
 -   *
 -   * @type {string}
 -   * @memberof ProductCategoryjsonld
 -   */
--  id?: string;
+-  id: string;
  }
  /**
   *
 @@ -519,12 +513,6 @@ export interface ProductCollectionjsonld {
     * @memberof ProductCollectionjsonld
     */
-   products?: Array<string>;
+   products: Array<string>;
 -  /**
 -   *
 -   * @type {string}
 -   * @memberof ProductCollectionjsonld
 -   */
--  id?: string;
+-  id: string;
  }
  /**
   *
 @@ -587,12 +575,6 @@ export interface ProductLocationjsonld {
     * @memberof ProductLocationjsonld
     */
-   stocks?: Array<string>;
+   stocks: Array<string>;
 -  /**
 -   *
 -   * @type {string}
 -   * @memberof ProductLocationjsonld
 -   */
--  id?: string;
+-  id: string;
  }
  /**
   *
@@ -57,26 +57,26 @@ index e33bcbd..8809d4e 100644
 @@ -692,12 +668,6 @@ export interface ProductStockjsonld {
     * @memberof ProductStockjsonld
     */
-   bestBefore?: { [key: string]: string };
+   bestBefore: { [key: string]: string };
 -  /**
 -   *
 -   * @type {string}
 -   * @memberof ProductStockjsonld
 -   */
--  id?: string;
+-  id: string;
  }
  /**
   *
 @@ -815,12 +785,6 @@ export interface Productjsonld {
     * @memberof Productjsonld
     */
-   stocks?: Array<string>;
+   stocks: Array<string>;
 -  /**
 -   *
 -   * @type {string}
 -   * @memberof Productjsonld
 -   */
--  id?: string;
+-  id: string;
  }
- 
+
  /**
