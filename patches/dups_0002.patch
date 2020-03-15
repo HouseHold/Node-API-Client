@@ -1,0 +1,73 @@
+diff --git a/api.ts b/api.ts
+index 7ce3dab..e488644 100644
+--- a/api.ts
++++ b/api.ts
+@@ -679,19 +679,19 @@ export interface ProductManufacturerjsonld {
+    * @type {string}
+    * @memberof ProductManufacturerjsonld
+    */
+-  context: string;
++  '@context': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductManufacturerjsonld
+    */
+-  id: string;
++  '@id': string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductManufacturerjsonld
+    */
+-  type: string;
++  '@type': string;
+   /**
+    *
+    * @type {string}
+@@ -827,19 +827,19 @@ export interface ProductStockjsonldAdd {
+    * @type {string}
+    * @memberof ProductStockjsonldAdd
+    */
+-  context?: string;
++  '@context'?: string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductStockjsonldAdd
+    */
+-  id?: string;
++  '@id'?: string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductStockjsonldAdd
+    */
+-  type?: string;
++  '@type'?: string;
+   /**
+    * Quantity of products in stock. Cannot be updated directly.
+    * @type {number}
+@@ -858,19 +858,19 @@ export interface ProductStockjsonldConsume {
+    * @type {string}
+    * @memberof ProductStockjsonldConsume
+    */
+-  context?: string;
++  '@context'?: string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductStockjsonldConsume
+    */
+-  id?: string;
++  '@id'?: string;
+   /**
+    *
+    * @type {string}
+    * @memberof ProductStockjsonldConsume
+    */
+-  type?: string;
++  '@type'?: string;
+ }
+ /**
+  *
