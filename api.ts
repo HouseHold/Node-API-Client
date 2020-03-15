@@ -61,6 +61,12 @@ export interface InlineObject1 {
    * @memberof InlineObject1
    */
   price?: number;
+  /**
+   * YYYY-MM-DD date or null, if product is set not expiring.
+   * @type {string}
+   * @memberof InlineObject1
+   */
+  bestBefore?: string | null;
 }
 /**
  *
